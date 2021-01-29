@@ -7,7 +7,7 @@ Bounce b = Bounce();
 void setup() {
   mode = 0;
   state = true;
-  light = 0; ///change this
+  light = 1;
   button = 0;
   
   b.attach(button, INPUT_PULLUP);
@@ -43,6 +43,6 @@ void activate() {
   else if (mode == 2) {
    state = !state; 
    digitalWrite(light, state);
-   delayATTiny85HelloBlink(100);
+   delay(100);
   } 
 }
